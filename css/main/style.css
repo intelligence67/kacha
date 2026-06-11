@@ -333,7 +333,7 @@ body {
   .mobile-menu__all span {
     width: 32px;
     height: 24px;
-    background: url("../../img/arrow-right.png") center top/contain no-repeat;
+    background: url("../../img/arrow-right.webp") center top/contain no-repeat;
   }
   .mobile-menu__all:hover, .mobile-menu__all:focus {
     background: #FFFFFF;
@@ -475,7 +475,7 @@ body {
   border-radius: 20px;
   width: 72px;
   height: 72px;
-  background: url("../../img/arrow-right.png") center/32px 24px no-repeat #e8dcc2;
+  background: url("../../img/arrow-right.webp") center/32px 24px no-repeat #e8dcc2;
 }
 
 @media screen and (max-width: 991.98px) {
@@ -538,7 +538,7 @@ body {
     width: 32px;
     height: 24px;
     border-radius: 0;
-    background: url("../../img/arrow-right.png") center/32px 24px no-repeat;
+    background: url("../../img/arrow-right.webp") center/32px 24px no-repeat;
   }
   .hero-category--all:hover, .hero-category--all:focus {
     background: #e4d7c1;
@@ -937,7 +937,7 @@ body {
     height: 32px;
     top: 0;
     left: 0;
-    background: url("../../img/loan-selection-img.png") top center/contain no-repeat;
+    background: url("../../img/loan-selection-img.webp") top center/contain no-repeat;
     position: absolute;
   }
   .loan-selection__content {
