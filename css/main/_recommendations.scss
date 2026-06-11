@@ -1,0 +1,114 @@
+.recommendations {
+  padding: 40px 0;
+
+  &__title {
+    font-size: 38px;
+    font-weight: 700;
+    line-height: 126%;
+    text-align: center;
+    margin-bottom: 40px;
+  }
+
+  &-cards {
+    &__content {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 20px;
+    }
+
+    &__btn-all {
+      width: fit-content;
+      border-radius: 8px;
+      padding: 10px;
+      min-width: 160px;
+      min-height: 44px;
+      margin: 40px auto 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border: 1px solid $color-border-btn;
+      outline: none;
+      background: none;
+
+      font-size: 15px;
+      font-weight: 400;
+      line-height: 133%;
+      text-align: center;
+      color: $color-blue-link;
+
+      &:hover,
+      &:focus {
+        background: $color-white-solid;
+        color: $color-black--800;
+      }
+    }
+  }
+
+  .recommendations-card {
+    border-radius: 24px;
+    padding: 20px;
+    min-height: 332px;
+    background: $color-athens-gray;
+    color: $color-black--800;
+
+    &:hover,
+    &:focus {
+      box-shadow: 0 12px 12px 0 rgba(0, 0, 0, 0.21);
+    }
+
+    &__title {
+      font-size: 28px;
+      font-weight: 700;
+      line-height: 126%;
+      text-align: center;
+      margin-bottom: 10px;
+    }
+
+    &__text {
+      font-size: 15px;
+      font-weight: 400;
+      line-height: 160%;
+      text-align: center;
+      margin-bottom: 15px;
+    }
+
+    &__img {
+      width: 100%;
+      max-width: 234px;
+      aspect-ratio: 234 / 153;
+      object-fit: contain;
+      object-position: center;
+      display: block;
+      margin: 0 auto;
+    }
+
+    &__select {
+      border-radius: 8px;
+      padding: 10px;
+      width: 100%;
+      max-width: 160px;
+      display: block;
+      background: $color-white-solid;
+
+      font-size: 15px;
+      font-weight: 600;
+      line-height: 133%;
+      text-align: center;
+      margin: 0 auto;
+    }
+  }
+
+  @include breakpoint($bp-md) {
+    &__title {
+      font-size: 6.4vw;
+    }
+
+    &-cards {
+      &__content {
+        grid-template-columns: 1fr;
+        gap: 20px;
+      }
+    }
+  }
+
+}

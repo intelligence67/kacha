@@ -1,0 +1,669 @@
+<!DOCTYPE html>
+<html lang="Es">
+
+<head>
+  <!-- meta -->
+  <meta charset="utf-8">
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <meta name="format-detection" content="telephone=no">
+
+  <!-- favicon -->
+  <link rel="icon" type="image/png" href="./favicon/favicon-96x96.png" sizes="96x96" />
+  <link rel="icon" type="image/svg+xml" href="./favicon/favicon.svg" />
+  <link rel="shortcut icon" href="./favicon/favicon.ico" />
+  <link rel="apple-touch-icon" sizes="180x180" href="./favicon/apple-touch-icon.png" />
+  <link rel="manifest" href="./favicon/site.webmanifest" />
+
+  <!-- style -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+  <link rel="stylesheet" href="../css/main/style.css">
+
+  <!-- title -->
+  <title>Найкращі фінансові умови за лічені хвилини</title>
+
+</head>
+
+<body>
+
+  <header class="header">
+    <div class="container">
+      <div class="header__inner">
+        <a class="header__logo" href="#">
+          <img src="./img/logo.png" width="83" height="48" alt="Кача гроші">
+        </a>
+
+        <nav class="header__nav">
+          <a href="#loan-selection">Кредит онлайн</a>
+          <a href="#recommendations">Рекомендовані МФО</a>
+          <a href="#reviews">Відгуки</a>
+          <a href="#rating">Рейтинг</a>
+          <!-- <a href="#">Сервіси та послуги</a>
+          <a href="#">Статті</a> -->
+          <a href="#faq">Часті питання</a>
+        </nav>
+
+        <button class="header__burger" type="button" aria-label="Відкрити меню">
+          <span></span>
+        </button>
+      </div>
+    </div>
+
+    <div class="mobile-menu">
+      <nav class="mobile-menu__nav">
+        <a href="#loan-selection">Кредит онлайн</a>
+        <a href="#recommendations">Рекомендовані МФО</a>
+        <a href="#reviews">Відгуки</a>
+        <a href="#rating">Рейтинг</a>
+        <!-- <a href="#">Сервіси та послуги</a>
+        <a href="#">Статті</a> -->
+        <a href="#faq">Часті питання</a>
+      </nav>
+
+      <a class="mobile-menu__all" href="#">
+        Всі онлайн кредити
+        <span></span>
+      </a>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="container">
+      <div class="hero__inner">
+        <a class="hero__picture" href="#" target="_blank" rel="noopener noreferrer">
+          <picture>
+            <source srcset="./img/hero-mobile.jpg" media="(max-width: 767px)">
+            <img src="./img/hero.jpg" alt="Найкращі фінансові умови">
+          </picture>
+        </a>
+
+        <div class="hero__content">
+          <h1 class="hero__title">
+            Найкращі фінансові умови<br> за лічені хвилини
+          </h1>
+
+          <p class="hero__text">
+            Порівняй і обери вигідні кредити, депозити та страхування без зайвих пошуків
+          </p>
+
+          <a class="hero__btn" href="#">
+            Підібрати кредит
+          </a>
+        </div>
+
+        <div class="hero__categories">
+          <a class="hero-category" href="#">
+            <img src="./img/category-1.png" width="72" height="72" alt="category">
+            <span>Сума від<br> 2 000 грн</span>
+          </a>
+
+          <a class="hero-category" href="#">
+            <img src="./img/category-2.png" width="72" height="72" alt="category">
+            <span>Кредит під<br> 0,01%</span>
+          </a>
+
+          <a class="hero-category" href="#">
+            <img src="./img/category-3.png" width="72" height="72" alt="category">
+            <span>Новинки<br> МФО</span>
+          </a>
+
+          <a class="hero-category" href="#">
+            <img src="./img/category-4.png" width="72" height="72" alt="category">
+            <span>Лідери<br> ринку</span>
+          </a>
+
+          <a class="hero-category" href="#">
+            <img src="./img/category-5.png" width="72" height="72" alt="category">
+            <span>Швидкий<br> кредит</span>
+          </a>
+
+          <a class="hero-category" href="#">
+            <img src="./img/category-6.png" width="72" height="72" alt="category">
+            <span>Криптовалют<br>ний кредит</span>
+          </a>
+
+          <a class="hero-category hero-category--all" href="#" target="_blank" rel="noopener noreferrer">
+            <span>Всі онлайн<br> кредити</span>
+            <i></i>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="loan-selection" id="loan-selection">
+    <div class="container">
+      <h2 class="loan-selection__title">Автоматичний підбір пропозицій</h2>
+
+      <form class="loan-selection__form" action="#" method="post" novalidate>
+        <input class="loan-selection__type-input" type="hidden" name="credit_type" value="Швидкий">
+
+        <div class="loan-selection__tabs loan-selection__tabs--pc">
+          <button class="loan-selection__tab is-active" type="button" data-type="Швидкий">
+            Швидкий
+          </button>
+
+          <button class="loan-selection__tab" type="button" data-type="Довгостроковий">
+            Довгостроковий
+          </button>
+
+          <button class="loan-selection__tab" type="button" data-type="Криптопозика">
+            Криптопозика
+          </button>
+        </div>
+
+        <div class="loan-selection__card">
+
+          <div class="loan-selection__aside">
+            <div class="loan-selection__tabs loan-selection__tabs--mob">
+              <button class="loan-selection__tab is-active" type="button" data-type="Швидкий">
+                Швидкий
+              </button>
+
+              <button class="loan-selection__tab" type="button" data-type="Довгостроковий">
+                Довгостроковий
+              </button>
+
+              <button class="loan-selection__tab" type="button" data-type="Криптопозика">
+                Криптопозика
+              </button>
+            </div>
+
+            <img class="loan-selection__img" src="./img/loan-selection-img.png" width="340" height="340"
+              alt="loan selection">
+
+            <div class="loan-selection__info">
+              <h3>AI пошук та підбір пропозицій</h3>
+              <p>
+                Наш AI асистент аналізує сотні кредитних пропозицій і підбирає ті, що максимально відповідають вашим
+                потребам.
+              </p>
+            </div>
+          </div>
+
+          <div class="loan-selection__content">
+            <h3 class="loan-selection__form-title">Швидкий кредит</h3>
+
+            <div class="loan-selection__progress">
+              <div class="loan-selection__progress-head">
+                <span>Вже заповнено</span>
+                <strong class="loan-selection__progress-value">5%</strong>
+              </div>
+
+              <div class="loan-selection__progress-line">
+                <span></span>
+              </div>
+            </div>
+
+            <div class="loan-selection__fields">
+              <input class="loan-selection__field" type="text" name="amount" inputmode="numeric" maxlength="5"
+                placeholder="Сума кредиту">
+
+              <label class="loan-selection__field-wrap">
+                <input class="loan-selection__field" type="text" name="full_name"
+                  placeholder="Прізвище, ім’я та по-батькові*" required>
+                <span class="loan-selection__bonus">+20%</span>
+              </label>
+
+              <input class="loan-selection__field" type="tel" name="phone" placeholder="Телефон*" required>
+
+              <input class="loan-selection__field" type="email" name="email" placeholder="Електронна пошта*" required>
+
+              <input class="loan-selection__field" type="date" name="birth_date" required>
+
+              <select class="loan-selection__field" name="credit_goal">
+                <option value="">Ціль кредиту</option>
+                <option value="Інші споживчі цілі">Інші споживчі цілі</option>
+                <option value="Ліки">Ліки</option>
+                <option value="Оренда житла">Оренда житла</option>
+                <option value="Розваги">Розваги</option>
+                <option value="Ремонт">Ремонт</option>
+                <option value="Оплата комунальних послуг">Оплата комунальних послуг</option>
+                <option value="Погашення кредиту">Погашення кредиту</option>
+              </select>
+
+              <select class="loan-selection__field" name="gender">
+                <option value="">Стать</option>
+                <option value="Чоловік">Чоловік</option>
+                <option value="Жінка">Жінка</option>
+              </select>
+
+              <select class="loan-selection__field" name="social_status">
+                <option value="">Соціальний статус</option>
+                <option value="Працюю">Працюю</option>
+                <option value="Військовослужбовець">Військовослужбовець</option>
+                <option value="Підприємець">Підприємець</option>
+                <option value="Студент">Студент</option>
+                <option value="Не працюю">Не працюю</option>
+              </select>
+            </div>
+
+            <div class="loan-selection__history">
+              <p>Будь яка кредитна історія?</p>
+
+              <div class="loan-selection__radio-group">
+                <label class="loan-selection__radio">
+                  <input type="radio" name="credit_history" value="Так" checked required>
+                  <span>Так</span>
+                </label>
+
+                <label class="loan-selection__radio">
+                  <input type="radio" name="credit_history" value="Ні" required>
+                  <span>Ні</span>
+                </label>
+              </div>
+            </div>
+
+            <div class="loan-selection__bottom">
+              <p>
+                Натискаючи «<span>Підібрати кредит</span>», ви погоджуєтесь з <a
+                  href="https://kachay.com.ua/wp-content/uploads/2025/10/zgoda_na_obrobku_personalnyh_danyh_kg_25_09_25.pdf"
+                  rel="noopener noreferrer" target="_blank">обробкою персональних даних</a>.
+                Сервіс не видає кредити, а лише допомагає обрати пропозиції партнерів.
+              </p>
+
+              <button class="loan-selection__submit" type="submit">
+                Підібрати кредит
+              </button>
+            </div>
+          </div>
+        </div>
+      </form>
+    </div>
+  </section>
+
+  <section class="recommendations" id="recommendations">
+    <div class="container">
+      <h2 class="recommendations__title">Рекомендовані МФО</h2>
+      <div class="recommendations-cards">
+        <div class="recommendations-cards__content">
+          <a class="recommendations-cards__item recommendations-card" href="#" target="_blank"
+            rel="noopener noreferrer">
+            <h3 class="recommendations-card__title">Вибір клієнтів</h3>
+            <p class="recommendations-card__text">Обираємо найкращі пропозиції замість вас, щоб ви просто взяли гроші на
+              свої потреби.</p>
+            <img class="recommendations-card__img" width="234" height="153" src="./img/recommendation_1.png" alt="img">
+            <span class="recommendations-card__select">Перейти</span>
+          </a>
+          <a class="recommendations-cards__item recommendations-card" href="#" target="_blank"
+            rel="noopener noreferrer">
+            <h3 class="recommendations-card__title">Найвигідніші умови</h3>
+            <p class="recommendations-card__text">Мінімум переплат, максимум користі — знаходимо для вас кредит із
+              кращими ставками та бонусами.</p>
+            <img class="recommendations-card__img" width="234" height="153" src="./img/recommendation_2.png" alt="img">
+            <span class="recommendations-card__select">Перейти</span>
+          </a>
+          <a class="recommendations-cards__item recommendations-card" href="#" target="_blank"
+            rel="noopener noreferrer">
+            <h3 class="recommendations-card__title">Погоджують з поганою кредитною</h3>
+            <p class="recommendations-card__text">Навіть якщо були прострочки — ви все одно можете отримати схвалення та
+              потрібну суму.</p>
+            <img class="recommendations-card__img" width="234" height="153" src="./img/recommendation_3.png" alt="img">
+            <span class="recommendations-card__select">Перейти</span>
+          </a>
+          <a class="recommendations-cards__item recommendations-card" href="#" target="_blank"
+            rel="noopener noreferrer">
+            <h3 class="recommendations-card__title">Найбільша сума</h3>
+            <p class="recommendations-card__text">Доступ до максимально можливої суми кредиту, щоб покрити великі
+              покупки чи важливі витрати.</p>
+            <img class="recommendations-card__img" width="234" height="153" src="./img/recommendation_4.png" alt="img">
+            <span class="recommendations-card__select">Перейти</span>
+          </a>
+        </div>
+        <!-- <button class="recommendations-cards__btn-all" type="button">Всі пропозиції</button> -->
+        <a class="recommendations-cards__btn-all" href="#" target="_blank" rel="noopener noreferrer">Всі пропозиції</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="reviews" id="reviews">
+    <div class="container">
+      <h2 class="reviews__title">Відгуки</h2>
+      <div class="reviews__nav">
+        <button class="reviews__prev" type="button">
+          ←
+        </button>
+
+        <button class="reviews__next" type="button">
+          →
+        </button>
+      </div>
+
+      <div class="reviews__slider swiper">
+        <div class="reviews__content swiper-wrapper">
+          <div class="reviews__item swiper-slide review-card">
+            <img class="review-card__logo" src="./img/review-logo-1.svg" alt="Treba Credit">
+            <div class="review-card__name">Валерія</div>
+            <p class="review-card__text">
+              Сервіс працює справді швідко, гроші на карточку прийшли без затримок. Умови стандартні для мікрокредитів,
+              нічого особливого, але й без неприємних сюрпризів. Загалом компанія виконує свою роботу чесно.
+            </p>
+            <a class="review-card__link" href="#" target="_blank" rel="noopener noreferrer">Детальніше</a>
+          </div>
+
+          <div class="reviews__item swiper-slide review-card">
+            <img class="review-card__logo" src="./img/review-logo-2.svg" alt="AvansCredit">
+            <div class="review-card__name">Віктор Д.</div>
+            <p class="review-card__text">
+              Дуже задоволений сервісом! Заявку оформив за кілька хвилин, гроші отримав майже миттєво на картку. Все
+              прозоро, без прихованих платежів. Рекомендую!
+            </p>
+            <a class="review-card__link" href="#" target="_blank" rel="noopener noreferrer">Детальніше</a>
+          </div>
+
+          <div class="reviews__item swiper-slide review-card">
+            <img class="review-card__logo" src="./img/review-logo-3.png" alt="Credit7">
+            <div class="review-card__name">Світлана</div>
+            <p class="review-card__text">
+              Дуже задоволений сервісом! Заявку оформив за кілька хвилин, гроші отримав майже миттєво на картку. Все
+              прозоро, без прихованих платежів. Рекомендую!
+            </p>
+            <a class="review-card__link" href="#" target="_blank" rel="noopener noreferrer">Детальніше</a>
+          </div>
+
+          <div class="reviews__item swiper-slide review-card">
+            <img class="review-card__logo" src="./img/review-logo-1.svg" alt="Treba Credit">
+            <div class="review-card__name">Валерія</div>
+            <p class="review-card__text">
+              Сервіс працює справді швідко, гроші на карточку прийшли без затримок. Умови стандартні для мікрокредитів,
+              нічого особливого, але й без неприємних сюрпризів. Загалом компанія виконує свою роботу чесно.
+            </p>
+            <a class="review-card__link" href="#" target="_blank" rel="noopener noreferrer">Детальніше</a>
+          </div>
+
+          <div class="reviews__item swiper-slide review-card">
+            <img class="review-card__logo" src="./img/review-logo-2.svg" alt="AvansCredit">
+            <div class="review-card__name">Віктор Д.</div>
+            <p class="review-card__text">
+              Дуже задоволений сервісом! Заявку оформив за кілька хвилин, гроші отримав майже миттєво на картку. Все
+              прозоро, без прихованих платежів. Рекомендую!
+            </p>
+            <a class="review-card__link" href="#" target="_blank" rel="noopener noreferrer">Детальніше</a>
+          </div>
+
+          <div class="reviews__item swiper-slide review-card">
+            <img class="review-card__logo" src="./img/review-logo-3.png" alt="Credit7">
+            <div class="review-card__name">Світлана</div>
+            <p class="review-card__text">
+              Дуже задоволений сервісом! Заявку оформив за кілька хвилин, гроші отримав майже миттєво на картку. Все
+              прозоро, без прихованих платежів. Рекомендую!
+            </p>
+            <a class="review-card__link" href="#" target="_blank" rel="noopener noreferrer">Детальніше</a>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="rating" id="rating">
+    <div class="container">
+      <h2 class="rating__title">Кача рейтинг МФО</h2>
+
+      <div class="rating__head">
+        <img class="rating__decor" width="81" height="76" src="./img/rating-decor.png" alt="rating-decor">
+
+        <button class="rating__sort" type="button">
+          <span class="rating__sort-text">Рейтинг:</span>
+
+          <span class="rating__sort-icon">
+            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M3.75 15L6.25 17.5L8.75 15M6.25 17.5V2.5M16.25 5L13.75 2.5L11.25 5M13.75 2.5V17.5"
+                stroke="#336FEE" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+          </span>
+        </button>
+      </div>
+
+      <div class="rating__list">
+        <a class="rating__item" href="#" data-rating="5.0">
+          <img class="rating__logo" src="./img/rating-logo-1.png" alt="Treba Credit">
+          <div class="rating__value">
+            5.0
+          </div>
+        </a>
+
+        <a class="rating__item" href="#" data-rating="4.5">
+          <img class="rating__logo" src="./img/rating-logo-2.png" alt="AvansCredit">
+          <div class="rating__value">
+
+            4.5
+          </div>
+        </a>
+
+        <a class="rating__item" href="#" data-rating="4.8">
+          <img class="rating__logo" src="./img/rating-logo-3.png" alt="Creditify">
+          <div class="rating__value">
+            4.8
+          </div>
+        </a>
+
+        <a class="rating__item" href="#" data-rating="3.6">
+          <img class="rating__logo" src="./img/rating-logo-4.png" alt="Credit7">
+          <div class="rating__value">
+            3.6
+          </div>
+        </a>
+
+        <a class="rating__item" href="#" data-rating="4.2">
+          <img class="rating__logo" src="./img/rating-logo-5.png" alt="CreditKasa">
+          <div class="rating__value">
+            4.2
+          </div>
+        </a>
+      </div>
+
+      <a class="rating__all" href="#" target="_blank" rel="noopener noreferrer">Всі компанії</a>
+    </div>
+  </section>
+
+  <section class="credit-consultant">
+    <div class="container">
+      <h2 class="credit-consultant__title">
+        Більше 10 тис. клієнтів
+      </h2>
+
+      <div class="credit-consultant__subtitle">
+        Шукають кредит в
+        <a href="#" target="_blank" rel="noopener noreferrer">Телеграм</a>
+      </div>
+
+      <div class="credit-consultant__card">
+        <div class="credit-consultant__content">
+          <div class="credit-consultant__head">
+            <img class="credit-consultant__icon" width="120" height="120" src="./img/consultant-icon.svg"
+              alt="consultant-icon">
+
+            <h3 class="credit-consultant__card-title">
+              Кредитний консультант
+            </h3>
+
+            <p class="credit-consultant__text">
+              Створений на базі штучного інтелекту
+            </p>
+          </div>
+
+          <div class="credit-consultant__notice">
+            Телеграм бот підбере для вас оптимальні кредити за результатами ваших побажань і спроможностей
+          </div>
+
+          <a class="credit-consultant__btn" href="#" target="_blank" rel="noopener noreferrer">
+            Перейти в Telegram
+            <svg width="16" height="14" viewBox="0 0 16 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M15.9866 1.20879C16.1112 0.403318 15.3454 -0.232446 14.6292 0.0819956L0.364818 6.34484C-0.148772 6.57034 -0.111204 7.34826 0.421467 7.51789L3.36315 8.45467C3.92458 8.63347 4.53253 8.54102 5.02279 8.20231L11.655 3.62027C11.855 3.4821 12.073 3.76646 11.9021 3.94263L7.12811 8.86465C6.66501 9.34211 6.75693 10.1512 7.31397 10.5005L12.659 13.8523C13.2585 14.2282 14.0297 13.8506 14.1418 13.1261L15.9866 1.20879Z"
+                fill="white" />
+            </svg>
+          </a>
+        </div>
+
+        <div class="credit-consultant__picture">
+          <img src="./img/consultant-phone.png" width="376" height="451" alt="consultant-image">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="faq" id="faq">
+    <div class="container">
+      <h2 class="faq__title">Часті запитання</h2>
+
+      <div class="faq__inner">
+        <div class="faq__list">
+          <div class="faq__item">
+            <button class="faq__question" type="button">
+              Вимоги до позичальника
+              <span></span>
+            </button>
+
+            <div class="faq__answer">
+              <ul>
+                <li>Вік від 18 років;</li>
+                <li>Громадянство України;</li>
+                <li>Будь-яка кредитна історія.</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="faq__item">
+            <button class="faq__question" type="button">
+              Умови отримання
+              <span></span>
+            </button>
+
+            <div class="faq__answer">
+              <ul>
+                <li>Мінімальний термін погашення боргу (minimum and maximum period for repayment) становить 61 день.
+                </li>
+                <li>Максимальний Термін — 365 днів;</li>
+                <li>Максимальна річна відсоткова ставка, що включає позичковий відсоток, а також всі інші комісії і
+                  витрати за рік (maximum Annual Percentage Rate (APR), including interest rate plus fees and other
+                  costs for a year) становить 31%, а мінімальна 3%.</li>
+                <li>Річний відсоток за користування кредитом - min 1%, max 31%.</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="faq__item">
+            <button class="faq__question" type="button">
+              Наслідки невиплати позикових коштів
+              <span></span>
+            </button>
+
+            <div class="faq__answer">
+              <p>Якщо кредитор не сплачує кредитній організації суму кредиту і відсотки за користування кредитом в
+                обумовлений термін, кредитна організація нараховує неустойку за прострочення виплати по кредиту.
+                Зазвичай, кредитні організації надають додатково 3 робочих дня, щоб кредитор зміг внести черговий
+                платіж, або виплатити суму кредиту повністю, на випадок непередбаченої затримки, пов'язаної з
+                безготівковим переказом коштів. Якщо кредитна організація не отримує обумовлений у договорі платіж в
+                термін, вона зв'язується з кредитором і нагадує про наслідки, що настають при несплаті. Якщо тривалий
+                час не вдається зв'язатися з кредитором і платежі по кредиту не надходять, кредитна організація нарахує
+                грошовий штраф, розмір якого зазвичай дорівнює 0,1% від суми кредиту, точний розмір штрафів за
+                прострочення слід уточнювати при підписанні договору на надання кредитних послуг.</p>
+            </div>
+          </div>
+
+          <div class="faq__item">
+            <button class="faq__question" type="button">
+              Інформація про повну вартість кредиту та Приклад розрахунку
+              <span></span>
+            </button>
+
+            <div class="faq__answer">
+              <p>Якщо ви взяли кредит на суму 1000 гривень на 90 днів з процентною ставкою 0,01% в день, то плата за
+                користування засобами складе 0,01% в день, тобто 0,1 грн в день. Виходить ви повертаєте суму відсотків
+                рівну 9 грн, тобто 0.1 грн * 90 днів. А також суму кредиту рівну 1 000 грн. Таким чином, загальна сума
+                повернення складається з суми кредиту 1 000 і суми нарахованих відсотків за 90 дн. 9 грн і дорівнює 1090
+                грн. Мінімальний і максимальний період погашення боргу становить від 65 днів, до 365 днів. Максимальна
+                річна відсоткова ставка, що включає позичковий відсоток, а також всі інші комісії і витрати за рік, або
+                аналогічна ставка, розрахована відповідно до місцевого законодавства становить 31% річних.</p>
+            </div>
+          </div>
+        </div>
+
+        <form class="faq__search" action="#">
+          <label class="faq__search-label">
+            <input type="search" placeholder="Пошук">
+
+            <button class="faq__search-btn" type="submit" aria-label="Пошук">
+              <span></span>
+            </button>
+          </label>
+        </form>
+
+        <div class="faq__tags">
+          <a href="#">Як отримати кредит</a>
+          <a href="#">Умови повернення</a>
+          <a href="#">Прострочення і штрафи</a>
+          <a href="#">Як продовжити кредит</a>
+          <a href="#">Погашення онлайн</a>
+          <a href="#">Дострокове закриття</a>
+          <a href="#">Відсоткова ставка</a>
+          <a href="#">Промокоди та знижки</a>
+          <a href="#">Страхування життя</a>
+          <a href="#">Автострахування</a>
+          <a href="#">Курс валют</a>
+          <a href="#">Як подати заявку</a>
+          <a href="#">Чому відмовили</a>
+          <a href="#">Як отримати гроші на картку</a>
+          <a href="#">Перевірка кредитної історії</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__card">
+        <div class="footer__nav">
+          <h3 class="footer__title">Про нас:</h3>
+
+          <ul class="footer__list">
+            <li><a href="#loan-selection">Кредит онлайн</a></li>
+            <li><a href="#recommendations">Рекомендовані МФО</a></li>
+            <li><a href="#reviews">Відгуки</a></li>
+            <li><a href="#rating">Рейтинг</a></li>
+            <!-- <li><a href="#" target="_blank" rel="noopener noreferrer">Сервіси та послуги</a></li>
+            <li><a href="#" target="_blank" rel="noopener noreferrer">Статті</a></li> -->
+            <li><a href="#faq">Часті питання</a></li>
+          </ul>
+        </div>
+
+        <div class="footer__contacts">
+          <h3 class="footer__title">Контакти:</h3>
+
+          <a class="footer__email" href="mailto:info@kachay.com.ua">
+            info@kachay.com.ua
+          </a>
+
+          <a class="footer__complain" href="#" target="_blank" rel="noopener noreferrer">
+            Погасити
+          </a>
+        </div>
+
+        <button class="footer__up" type="button" aria-label="Прокрутити вгору">
+          <span></span>
+        </button>
+
+        <img class="footer__duck" width="124" height="124" src="./img/footer-duck.png" alt="manager-duck">
+      </div>
+
+      <div class="footer__links">
+        <a href="#" target="_blank" rel="noopener noreferrer">Згода на обробку персональних даних та доступу до
+          кредитної історії</a>
+        <a href="#" target="_blank" rel="noopener noreferrer">Інформація про ТОВ “КАЧАЙ ГРОШІ”</a>
+      </div>
+    </div>
+
+    <div class="footer__bottom">
+      ТОВ "КАЧАЙ ГРОШІ", ТМ КачаГроші
+    </div>
+  </footer>
+
+  <script type="module" src="./js/script.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+</body>
+
+</html>

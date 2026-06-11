@@ -1,0 +1,195 @@
+.faq {
+  padding: 40px 0;
+
+  &__title {
+    text-align: center;
+    font-size: 38px;
+    font-weight: 700;
+    line-height: 126%;
+    color: $color-black-shaft;
+    margin-bottom: 60px;
+  }
+
+  &__inner {
+    max-width: 936px;
+    margin: 0 auto;
+  }
+
+  &__list {
+    margin-bottom: 45px;
+  }
+
+  &__item {
+    margin-bottom: 20px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    &.is-active {
+      .faq__answer {
+        max-height: var(--answer-height);
+        opacity: 1;
+        padding-top: 8px;
+      }
+
+      .faq__question span {
+        transform: rotate(180deg);
+      }
+    }
+  }
+
+  &__question {
+    width: 100%;
+    padding: 0;
+    border: 0;
+    background: transparent;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+
+    text-align: left;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 130%;
+    color: $color-grey;
+    cursor: pointer;
+
+    span {
+      width: 24px;
+      height: 24px;
+      flex-shrink: 0;
+
+      background: currentColor;
+
+      mask-image: url("../../img/chevron-down.svg");
+      mask-repeat: no-repeat;
+      mask-position: center;
+      mask-size: 14px 8px;
+
+      -webkit-mask-image: url("../../img/chevron-down.svg");
+      -webkit-mask-repeat: no-repeat;
+      -webkit-mask-position: center;
+      -webkit-mask-size: 14px 8px;
+
+      transition: transform .3s ease;
+    }
+  }
+
+  &__answer {
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+    padding-top: 0;
+
+    transition:
+      max-height .35s ease,
+      opacity .25s ease,
+      padding-top .35s ease;
+
+    p,
+    ul,
+    ol {
+      font-size: 14px;
+      line-height: 150%;
+      margin: 0;
+      color: $color-grey;
+    }
+
+    ul {
+      padding-left: 24px;
+    }
+
+    li {
+      list-style-type: initial;
+    }
+  }
+
+  &__search {
+    margin-bottom: 30px;
+  }
+
+  &__search-label {
+    position: relative;
+    display: block;
+
+    input {
+      width: 100%;
+      height: 56px;
+      padding: 0 24px 0 52px;
+      border: 0;
+      border-radius: 12px;
+      outline: none;
+      background: $color-white-solid;
+    }
+  }
+
+  &__search-btn {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+
+    width: 52px;
+    height: 52px;
+    padding: 0;
+    border: 0;
+    background: transparent;
+    cursor: pointer;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    span {
+      display: block;
+      width: 24px;
+      height: 24px;
+
+      background: $color-black;
+
+      mask: url("../../img/search.svg") center / contain no-repeat;
+      -webkit-mask: url("../../img/search.svg") center / contain no-repeat;
+    }
+  }
+
+  &__tags {
+    margin: 0 auto;
+    padding: 0 45px;
+
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+
+    a {
+      padding: 8px 14px;
+      border-radius: 999px;
+      background: $color-blue-160;
+
+      font-size: 13px;
+      line-height: 123%;
+      color: $color-black--800;
+      text-decoration: none;
+
+      &:hover {
+        background: $color-white-solid;
+      }
+    }
+  }
+
+  @include breakpoint($bp-md) {
+    &__tags {
+      padding: 0;
+    }
+  }
+
+  @include breakpoint($bp-md) {
+    &__title {
+      font-size: 6.4vw;
+      margin-bottom: 25px;
+    }
+  }
+}

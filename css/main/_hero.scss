@@ -1,0 +1,232 @@
+.hero {
+  padding: 60px 0 20px;
+  background:
+    radial-gradient(circle at 15% 10%, rgba(204, 207, 245, .7), transparent 35%),
+    radial-gradient(circle at 85% 10%, rgba(245, 204, 215, .7), transparent 35%),
+    $color-bg-gray;
+
+  &__inner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &__content {
+    max-width: 940px;
+    margin-bottom: 40px;
+    text-align: center;
+    order: 1;
+  }
+
+  &__title {
+    font-size: 46px;
+    font-weight: 700;
+    line-height: 120%;
+    color: $color-black--800;
+    margin-bottom: 20px;
+  }
+
+  &__text {
+    font-size: 18px;
+    line-height: 120%;
+    color: $color-black--800;
+    margin: 0 0 40px;
+  }
+
+  &__btn {
+
+    width: fit-content;
+    border-radius: 12px;
+    padding: 10px;
+    min-width: 220px;
+    min-height: 56px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    outline: none;
+    background: $color-bank-sunglow2;
+    text-decoration: none;
+
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 125%;
+    text-align: center;
+    color: $color-black-shaft;
+
+    &:hover,
+    &:focus {
+      background: $color-bg-yellow;
+      color: $color-black-shaft;
+      box-shadow: 0 4px 4px -4px rgba(12, 12, 13, 0.05), 0 16px 32px -4px rgba(12, 12, 13, 0.1);
+    }
+
+    &.disabled, &[disabled] {
+      background: $color-grey-2;
+      color: $color-bank-porcelain;
+      pointer-events: none;
+    }
+  }
+
+  &__picture {
+    width: 100%;
+    display: block;
+    order: 2;
+    margin-bottom: 40px;
+
+    img {
+      display: block;
+      width: 100%;
+      height: auto;
+      border-radius: 16px;
+    }
+  }
+
+  &__categories {
+    order: 3;
+    width: 100%;
+    padding: 0 70px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: 20px;
+  }
+}
+
+.hero-category {
+  width: auto;
+  min-height: 138px;
+  padding: 8px;
+
+  border: 1px solid $color-grey-89;
+  border-radius: 8px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+
+  text-align: center;
+  text-decoration: none;
+
+  &:hover {
+    border-color: #ffd426;
+    background: $color-white-solid;
+  }
+
+  img {
+    width: 72px;
+    height: 72px;
+    object-fit: contain;
+  }
+
+  span {
+    font-size: 13px;
+    font-weight: 600;
+    line-height: 150%;
+    color: $color-black;
+    opacity: 0.68;
+  }
+
+  &--all {
+    flex-direction: column-reverse;
+
+    i {
+      border-radius: 20px;
+      width: 72px;
+      height: 72px;
+      background: url("../../img/arrow-right.png") center / 32px 24px no-repeat $color-brown-light2;
+    }
+  }
+}
+
+@include breakpoint($bp-lg) {
+  .hero {
+    &__categories {
+      padding: 0;
+    }
+  }
+}
+
+@include breakpoint($bp-md) {
+
+  .hero {
+    padding: 15px 0 20px;
+
+    &__picture {
+      order: 1;
+      margin-bottom: 20px;
+    }
+
+    &__content {
+      order: 2;
+    }
+
+    &__title {
+      margin-bottom: 10px;
+      font-size: 9.070vw;
+
+      br {
+        display: none;
+      }
+    }
+
+    &__text {
+      margin-bottom: 20px;
+      font-size: 4.80vw;
+      line-height: 145%;
+    }
+
+    &__categories {
+      width: 100%;
+      order: 3;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 8px;
+    }
+  }
+
+  .hero-category {
+    width: auto;
+    min-height: 120px;
+    padding: 0 6px 8px 6px;
+
+    &--all {
+      grid-column: 1 / -1;
+      min-height: 56px;
+      padding: 12px 16px;
+
+      flex-direction: row;
+      justify-content: space-between;
+
+      margin-top: 10px;
+      border: 0;
+
+      background: $color-brown-light;
+
+      span {
+        font-size: 13px;
+        flex-shrink: 0; 
+
+        br {
+          display: none;
+        }
+      }
+
+      i {
+        width: 32px;
+        height: 24px;
+        border-radius: 0;
+        background: url("../../img/arrow-right.png") center / 32px 24px no-repeat;
+      }
+
+      &:hover,
+      &:focus {
+        background: $color-brown-light;
+        border-color: initial;
+        -webkit-filter: brightness(0.90);
+        filter: brightness(0.90);
+      }
+    }
+  }
+}

@@ -1,0 +1,173 @@
+.footer {
+  padding-top: 40px;
+  border-top: 1px solid $color-border-btn;
+
+  &__card {
+    position: relative;
+    min-height: 286px;
+    padding: 28px;
+    border-radius: 12px;
+    background: $color-white-solid;
+
+    display: grid;
+    grid-template-columns: 340px 1fr auto;
+    gap: 20px;
+    overflow: hidden;
+  }
+
+  &__title {
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 120%;
+    margin-bottom: 12px;
+    color: $color-black;
+  }
+
+  &__list {
+    display: grid;
+    gap: 10px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+
+    a {
+      font-size: 16px;
+      line-height: 120%;
+      color: $color-black-60;
+      text-decoration: none;
+
+      &:hover {
+        color: $color-blue-link;
+        text-decoration: underline;
+      }
+    }
+  }
+
+  &__email {
+    display: inline-block;
+    margin-bottom: 10px;
+    font-size: 16px;
+    line-height: 120%;
+    color: $color-blue-link;
+    text-decoration: underline;
+
+    &:hover {
+      text-decoration: none;
+    }
+  }
+
+  &__complain {
+    width: fit-content;
+    border-radius: 8px;
+    padding: 10px;
+    min-width: 160px;
+    min-height: 44px;
+    margin: 20px 0 0 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid $color-border-btn;
+    outline: none;
+    background: none;
+
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 133%;
+    text-align: center;
+    color: $color-blue-link;
+
+    &:hover,
+    &:focus {
+      border-color: transparent;
+      background: $color-bg-yellow;
+      color: $color-black-shaft;
+    }
+  }
+
+  &__up {
+    position: relative;
+    z-index: 2;
+
+    width: 46px;
+    height: 46px;
+    padding: 0;
+    border: 0;
+    border-radius: 50%;
+    background: $color-bg-yellow;
+    cursor: pointer;
+
+    span {
+      display: block;
+      width: 24px;
+      height: 24px;
+      margin: auto;
+      background: $color-grey;
+      mask: url("../../img/arrow-up.svg") center / 14px 18px no-repeat;
+      -webkit-mask: url("../../img/arrow-up.svg") center / 14px 18px no-repeat;
+    }
+  }
+
+  &__duck {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 124px;
+    height: auto;
+  }
+
+  &__links {
+    display: grid;
+    gap: 8px;
+    margin: 20px 0;
+
+    a {
+      width: fit-content;
+      font-size: 16px;
+      line-height: 120%;
+      text-decoration: underline;
+      color: $color-blue-azure;
+
+      &:hover {
+        text-decoration: none;
+      }
+    }
+  }
+
+  &__bottom {
+    padding: 8px 10px;
+    background: $color-bg-shaft;
+    text-align: center;
+
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 120%;
+    color: $color-white-solid;
+  }
+}
+
+@include breakpoint($bp-md) {
+  .footer {
+    &__card {
+      padding: 12px;
+      min-height: 422px;
+
+      display: flex;
+      flex-direction: column;
+    }
+
+    &__up {
+      position: absolute;
+      top: 12px;
+      right: 12px;
+    }
+
+    &__title {
+      margin-bottom: 16px;
+    }
+
+    &__contacts {
+      position: relative;
+      z-index: 2;
+    }
+  }
+}
