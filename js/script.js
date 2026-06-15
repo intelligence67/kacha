@@ -69,10 +69,15 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-  // Calc
-  const form = document.querySelector('.loan-selection__form');
+  // forms 
+  initLoanSelectionForm();
+  initOffersForm();
 
-  if (form) {
+  function initLoanSelectionForm() {
+    const form = document.querySelector('.loan-selection__form');
+
+    if (!form) return;
+
     const tabs = form.querySelectorAll('.loan-selection__tab');
     const typeInput = form.querySelector('[name="credit_type"]');
     const formTitle = form.querySelector('.loan-selection__form-title');
@@ -261,6 +266,103 @@ document.addEventListener('DOMContentLoaded', () => {
     updateProgress();
   }
 
+  function initOffersForm() {
+    const offersForm = document.querySelector('.offers-form');
+
+    if (!offersForm) return;
+
+    const progressValue = offersForm.querySelector('.offers-form__progress-head strong');
+    const progressLine = offersForm.querySelector('.offers-form__progress-line span');
+
+    const amountInput = offersForm.querySelector('[name="amount"]');
+    const fullNameInput = offersForm.querySelector('[name="full_name"]');
+    const phoneInput = offersForm.querySelector('[name="phone"]');
+    const emailInput = offersForm.querySelector('[name="email"]');
+    const bonus = offersForm.querySelector('label span');
+    const offersNameInput = offersForm.querySelector('[name="full_name"]');
+    const offersBonus = offersForm.querySelector('.offers-form__bonus');
+
+    const progressFields = [
+      { field: amountInput, weight: 20 },
+      { field: fullNameInput, weight: 30 },
+      { field: phoneInput, weight: 25 },
+      { field: emailInput, weight: 25 }
+    ];
+
+    function updateProgress() {
+      let percent = 0;
+
+      progressFields.forEach(item => {
+        if (item.field && item.field.value.trim() !== '') {
+          percent += item.weight;
+        }
+      });
+
+      percent = Math.min(percent, 100);
+
+      if (progressValue) progressValue.textContent = `${percent}%`;
+      if (progressLine) progressLine.style.width = `${percent}%`;
+    }
+
+    function toggleBonus() {
+      if (!bonus || !fullNameInput) return;
+
+      bonus.classList.toggle('is-hidden', fullNameInput.value.trim() !== '');
+    }
+
+    function toggleOffersBonus() {
+      if (!offersNameInput || !offersBonus) return;
+
+      offersBonus.classList.toggle(
+        'is-hidden',
+        offersNameInput.value.trim() !== ''
+      );
+    }
+
+    if (amountInput) {
+      amountInput.addEventListener('input', () => {
+        amountInput.value = amountInput.value
+          .replace(/\D/g, '')
+          .replace(/^0+/, '')
+          .slice(0, 5);
+
+        updateProgress();
+      });
+    }
+
+    if (fullNameInput) {
+      fullNameInput.addEventListener('input', () => {
+        fullNameInput.value = fullNameInput.value.replace(/[^А-Яа-яІіЇїЄєҐґʼ'\-\s]/g, '');
+
+        toggleBonus();
+        updateProgress();
+      });
+    }
+
+    if (phoneInput) {
+      phoneInput.addEventListener('input', () => {
+        phoneInput.value = phoneInput.value.replace(/[^\d+]/g, '');
+        updateProgress();
+      });
+    }
+
+    if (emailInput) {
+      emailInput.addEventListener('input', updateProgress);
+    }
+
+    offersNameInput?.addEventListener('input', () => {
+      toggleOffersBonus();
+      updateOffersProgress();
+    });
+
+    offersForm.addEventListener('input', updateProgress);
+    offersForm.addEventListener('change', updateProgress);
+
+    toggleBonus();
+    updateProgress();
+    toggleOffersBonus();
+  }
+
   // Reviews
   const reviewsSlider = document.querySelector('.reviews__slider');
 
@@ -335,4 +437,57 @@ document.addEventListener('DOMContentLoaded', () => {
       });
     });
   }
+
+  // Offers
+
+  const offersSortBtn = document.querySelector('.offers__sort');
+  const offersList = document.querySelector('.offers__list');
+
+  if (offersSortBtn && offersList) {
+    let isAsc = false;
+
+    offersSortBtn.addEventListener('click', () => {
+      isAsc = !isAsc;
+
+      const children = Array.from(offersList.children);
+      const cards = children
+        .filter(item => item.classList.contains('offer-card'))
+        .sort((a, b) => {
+          const ratingA = parseFloat(a.dataset.rating) || 0;
+          const ratingB = parseFloat(b.dataset.rating) || 0;
+
+          return isAsc ? ratingA - ratingB : ratingB - ratingA;
+        });
+
+      const result = children.map(item => {
+        if (item.classList.contains('offer-card')) {
+          return cards.shift();
+        }
+
+        return item;
+      });
+
+      result.forEach(item => offersList.append(item));
+
+      offersSortBtn.classList.toggle('is-asc', isAsc);
+    });
+  }
+  const offerMoreButtons = document.querySelectorAll('.offer-card__more');
+
+  offerMoreButtons.forEach(button => {
+    button.addEventListener('click', () => {
+      const card = button.closest('.offer-card');
+
+      if (!card) return;
+
+      const isOpen = card.classList.toggle('is-open');
+      const fullParam = card.querySelector('.offer-card__param--full');
+
+      if (fullParam) {
+        fullParam.classList.toggle('is-hidden', isOpen);
+      }
+
+      button.firstChild.textContent = isOpen ? 'Згорнути ' : 'Детальніше ';
+    });
+  });
 });
