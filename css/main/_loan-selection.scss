@@ -234,6 +234,18 @@
     margin: 0;
   }
 
+  @supports (-webkit-touch-callout: none) {
+    input[type="date"]:invalid::before {
+      content: "дд.мм.гггг";
+      color: rgba(0, 0, 0, .54);
+    }
+
+    input[type="date"]:focus::before,
+    input[type="date"]:valid::before {
+      content: "";
+    }
+  }
+
   select.loan-selection__field {
     appearance: none;
     padding-right: 40px;
