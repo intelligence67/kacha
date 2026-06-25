@@ -109,9 +109,10 @@
 
   text-align: center;
   text-decoration: none;
+  transition: border-color .3s ease, background .3s ease;
 
   &:hover {
-    border-color: #ffd426;
+    border-color: $color-bank-sunglow2;
     background: $color-white-solid;
   }
 

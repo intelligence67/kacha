@@ -472,22 +472,29 @@ document.addEventListener('DOMContentLoaded', () => {
       offersSortBtn.classList.toggle('is-asc', isAsc);
     });
   }
-  const offerMoreButtons = document.querySelectorAll('.offer-card__more');
+  const offerMoreButtons = document.querySelectorAll(
+    '.offer-card__more, .top-offer-card__more'
+  );
 
   offerMoreButtons.forEach(button => {
     button.addEventListener('click', () => {
-      const card = button.closest('.offer-card');
+      const card = button.closest('.offer-card, .top-offer-card');
 
       if (!card) return;
 
       const isOpen = card.classList.toggle('is-open');
-      const fullParam = card.querySelector('.offer-card__param--full');
+
+      const fullParam = card.querySelector(
+        '.offer-card__param--full, .top-offer-card__param--full'
+      );
 
       if (fullParam) {
         fullParam.classList.toggle('is-hidden', isOpen);
       }
 
-      button.firstChild.textContent = isOpen ? 'Згорнути ' : 'Детальніше ';
+      button.firstChild.textContent = isOpen
+        ? 'Згорнути '
+        : 'Детальніше ';
     });
   });
 });
