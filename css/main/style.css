@@ -584,11 +584,15 @@ body {
   grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
   gap: 20px;
   width: 100%;
+  padding: 0 70px;
 }
 
 @media screen and (max-width: 991.98px) {
   .hero-article__title br, .hero-article__subtitle br {
     display: none;
+  }
+  .hero-article__categories {
+    padding: 0;
   }
 }
 @media screen and (max-width: 767.98px) {
@@ -663,6 +667,7 @@ body {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
   gap: 20px;
+  padding: 0 70px;
 }
 
 @media screen and (max-width: 991.98px) {
@@ -672,6 +677,9 @@ body {
   }
   .hero-additional__title br {
     display: none;
+  }
+  .hero-additional__categories {
+    padding: 0;
   }
 }
 @media screen and (max-width: 767.98px) {
